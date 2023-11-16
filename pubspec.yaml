@@ -39,6 +39,8 @@ dependencies:
   firebase_core: ^2.18.0
   firebase_storage: ^11.3.0
   snippet_coder_utils:
+  printing:
+  pdf:
 
 
   # The following adds the Cupertino Icons font to your application.

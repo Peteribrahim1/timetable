@@ -5,6 +5,7 @@ import 'package:timetable/screens/login_screen.dart';
 import 'package:timetable/screens/signup_screen.dart';
 import 'package:timetable/screens/splash_screen.dart';
 import 'package:timetable/screens/timetable_nd1_first.dart';
+import 'package:timetable/screens/view_nd1_first.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (ctx) => const SplashScreen(),
         LoginScreen.routeName: (ctx) => const LoginScreen(),
+        //   ViewNd1First.routeName: (ctx) => const ViewNd1First(),
       },
       // home: AllocationNd1(),
     );

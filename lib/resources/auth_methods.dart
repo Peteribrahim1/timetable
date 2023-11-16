@@ -289,4 +289,214 @@ class AuthMethods {
     }
     return res;
   }
+
+// new
+  // save
+  Future<String> saveND1first({
+    required String Course,
+    required String Lecturer,
+    required String CreditUnit,
+  }) async {
+    String res = 'Please enter all the fields';
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+    try {
+      if (Course.isNotEmpty && Lecturer.isNotEmpty && CreditUnit.isNotEmpty) {
+        //add user to database
+        await _firestore.collection('ND1first').add({
+          'Course': Course,
+          'Lecturer': Lecturer,
+          'CreditUnit': CreditUnit,
+          'uid': uid,
+        });
+        res = 'success';
+      }
+    } on FirebaseAuthException catch (err) {
+      print(err.code);
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
+
+  Future<String> saveND1second({
+    required String Course,
+    required String Lecturer,
+    required String CreditUnit,
+  }) async {
+    String res = 'Please enter all the fields';
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+    try {
+      if (Course.isNotEmpty && Lecturer.isNotEmpty && CreditUnit.isNotEmpty) {
+        //add user to database
+        await _firestore.collection('ND1second').add({
+          'Course': Course,
+          'Lecturer': Lecturer,
+          'CreditUnit': CreditUnit,
+          'uid': uid,
+        });
+        res = 'success';
+      }
+    } on FirebaseAuthException catch (err) {
+      print(err.code);
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
+
+  Future<String> saveND2first({
+    required String Course,
+    required String Lecturer,
+    required String CreditUnit,
+  }) async {
+    String res = 'Please enter all the fields';
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+    try {
+      if (Course.isNotEmpty && Lecturer.isNotEmpty && CreditUnit.isNotEmpty) {
+        //add user to database
+        await _firestore.collection('ND2first').add({
+          'Course': Course,
+          'Lecturer': Lecturer,
+          'CreditUnit': CreditUnit,
+          'uid': uid,
+        });
+        res = 'success';
+      }
+    } on FirebaseAuthException catch (err) {
+      print(err.code);
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
+
+  Future<String> saveND2second({
+    required String Course,
+    required String Lecturer,
+    required String CreditUnit,
+  }) async {
+    String res = 'Please enter all the fields';
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+    try {
+      if (Course.isNotEmpty && Lecturer.isNotEmpty && CreditUnit.isNotEmpty) {
+        //add user to database
+        await _firestore.collection('ND2second').add({
+          'Course': Course,
+          'Lecturer': Lecturer,
+          'CreditUnit': CreditUnit,
+          'uid': uid,
+        });
+        res = 'success';
+      }
+    } on FirebaseAuthException catch (err) {
+      print(err.code);
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
+
+  Future<String> saveHND1first({
+    required String Course,
+    required String Lecturer,
+    required String CreditUnit,
+  }) async {
+    String res = 'Please enter all the fields';
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+    try {
+      if (Course.isNotEmpty && Lecturer.isNotEmpty && CreditUnit.isNotEmpty) {
+        //add user to database
+        await _firestore.collection('HND1first').add({
+          'Course': Course,
+          'Lecturer': Lecturer,
+          'CreditUnit': CreditUnit,
+          'uid': uid,
+        });
+        res = 'success';
+      }
+    } on FirebaseAuthException catch (err) {
+      print(err.code);
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
+
+  Future<String> saveHND1second({
+    required String Course,
+    required String Lecturer,
+    required String CreditUnit,
+  }) async {
+    String res = 'Please enter all the fields';
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+    try {
+      if (Course.isNotEmpty && Lecturer.isNotEmpty && CreditUnit.isNotEmpty) {
+        //add user to database
+        await _firestore.collection('HND1second').add({
+          'Course': Course,
+          'Lecturer': Lecturer,
+          'CreditUnit': CreditUnit,
+          'uid': uid,
+        });
+        res = 'success';
+      }
+    } on FirebaseAuthException catch (err) {
+      print(err.code);
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
+
+  Future<String> saveHND2first({
+    required String Course,
+    required String Lecturer,
+    required String CreditUnit,
+  }) async {
+    String res = 'Please enter all the fields';
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+    try {
+      if (Course.isNotEmpty && Lecturer.isNotEmpty && CreditUnit.isNotEmpty) {
+        //add user to database
+        await _firestore.collection('HND2first').add({
+          'Course': Course,
+          'Lecturer': Lecturer,
+          'CreditUnit': CreditUnit,
+          'uid': uid,
+        });
+        res = 'success';
+      }
+    } on FirebaseAuthException catch (err) {
+      print(err.code);
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
+
+  Future<String> saveHND2second({
+    required String Course,
+    required String Lecturer,
+    required String CreditUnit,
+  }) async {
+    String res = 'Please enter all the fields';
+    String? uid = FirebaseAuth.instance.currentUser?.uid;
+    try {
+      if (Course.isNotEmpty && Lecturer.isNotEmpty && CreditUnit.isNotEmpty) {
+        //add user to database
+        await _firestore.collection('HND2second').add({
+          'Course': Course,
+          'Lecturer': Lecturer,
+          'CreditUnit': CreditUnit,
+          'uid': uid,
+        });
+        res = 'success';
+      }
+    } on FirebaseAuthException catch (err) {
+      print(err.code);
+    } catch (err) {
+      res = err.toString();
+    }
+    return res;
+  }
 }

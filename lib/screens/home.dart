@@ -1,11 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:timetable/screens/modal_hnd1.dart';
+import 'package:timetable/screens/nd1_add_first.dart';
 import 'package:timetable/screens/hnd1.dart';
 import 'package:timetable/screens/login_screen.dart';
+import 'package:timetable/screens/modal_nd1.dart';
 import 'package:timetable/screens/nd2.dart';
 
 import '../styles/styles.dart';
 import 'hnd2.dart';
+import 'modal_hnd2.dart';
+import 'modal_nd2.dart';
 import 'nd1.dart';
 
 class Home extends StatefulWidget {
@@ -55,19 +60,26 @@ class _HomeState extends State<Home> {
               const SizedBox(height: 74),
               const Center(
                 child: Text(
-                  'Hi dear! Welcome to',
+                  'Welcome to',
                   style: Styles.normalTextStyle,
+                  textAlign: TextAlign.center,
                 ),
               ),
               const SizedBox(height: 30),
-              const Text(
-                'HAFED Poly Timetable App',
-                style: Styles.bigTextStyle,
+              const Center(
+                child: Text(
+                  'HAFED Poly Timetable Generator',
+                  style: Styles.bigTextStyle,
+                  textAlign: TextAlign.center,
+                ),
               ),
               const SizedBox(height: 80),
-              const Text(
-                'Select a class to proceed',
-                style: Styles.normalTextStyle,
+              const Center(
+                child: Text(
+                  'Select a class to generate a timetable',
+                  style: Styles.normalTextStyle,
+                  textAlign: TextAlign.center,
+                ),
               ),
               const SizedBox(height: 40),
               SizedBox(
@@ -75,9 +87,9 @@ class _HomeState extends State<Home> {
                 width: 280,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => ND1()),
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => const ModalND1(),
                     );
                   },
                   style: ButtonStyle(
@@ -100,9 +112,9 @@ class _HomeState extends State<Home> {
                 width: 280,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const ND2()),
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => const ModalND2(),
                     );
                   },
                   style: ButtonStyle(
@@ -126,9 +138,9 @@ class _HomeState extends State<Home> {
                 width: 280,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const HND1()),
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => const ModalHND1(),
                     );
                   },
                   style: ButtonStyle(
@@ -151,9 +163,9 @@ class _HomeState extends State<Home> {
                 width: 280,
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const HND2()),
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) => const ModalHND2(),
                     );
                   },
                   style: ButtonStyle(
