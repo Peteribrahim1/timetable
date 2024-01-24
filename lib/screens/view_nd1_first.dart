@@ -42,7 +42,7 @@ class _ViewNd1FirstState extends State<ViewNd1First> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'VIEW COURSE/LECTURER ND1 FIRST',
+          'VIEW COURSE/LECTURER 100L FIRST',
           style: Styles.appBarTextStyle,
         ),
         centerTitle: true,

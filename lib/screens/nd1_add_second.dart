@@ -88,7 +88,7 @@ class _ND1Add_secondState extends State<ND1Add_second> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'ADD COURSE/LECTURER ND1 SECOND',
+          'ADD COURSE/LECTURER 100L SECOND',
           style: Styles.appBarTextStyle,
         ),
         centerTitle: true,

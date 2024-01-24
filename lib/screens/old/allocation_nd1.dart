@@ -2,30 +2,29 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-import '../styles/styles.dart';
+import '../../styles/styles.dart';
 
-class AllocationNd2 extends StatefulWidget {
-  const AllocationNd2({
+class AllocationNd1 extends StatefulWidget {
+  const AllocationNd1({
     super.key,
   });
 
   @override
-  State<AllocationNd2> createState() => _AllocationNd2State();
+  State<AllocationNd1> createState() => _AllocationNd1State();
 }
 
-class _AllocationNd2State extends State<AllocationNd2> {
-  String LC0M211 = '';
-  String LC0M212 = '';
-  String LC0M213 = '';
-  String LC0M214 = '';
-  String LC0M215 = '';
-  String LC0M216 = '';
-  String LC0M221 = '';
-  String LC0M222 = '';
-  String LC0M223 = '';
-  String LC0M224 = '';
-  String LC0M225 = '';
-  String LC0M226 = '';
+class _AllocationNd1State extends State<AllocationNd1> {
+  String LC0M111 = '';
+  String LC0M112 = '';
+  String LC0M113 = '';
+  String LC0M114 = '';
+  String LC0M115 = '';
+  String LC0M121 = '';
+  String LC0M122 = '';
+  String LC0M123 = '';
+  String LC0M124 = '';
+  String LC0M125 = '';
+  String LC0M126 = '';
 
   @override
   void initState() {
@@ -36,23 +35,22 @@ class _AllocationNd2State extends State<AllocationNd2> {
 
   void fetchdata() async {
     DocumentSnapshot snap = await FirebaseFirestore.instance
-        .collection('ND2_LECTURERS')
+        .collection('ND1_LECTURERS')
         .doc(FirebaseAuth.instance.currentUser!.uid)
         .get();
 
     setState(() {
-      LC0M211 = (snap.data() as Map<String, dynamic>)['LC0M211'];
-      LC0M212 = (snap.data() as Map<String, dynamic>)['LC0M212'];
-      LC0M213 = (snap.data() as Map<String, dynamic>)['LC0M213'];
-      LC0M214 = (snap.data() as Map<String, dynamic>)['LC0M214'];
-      LC0M215 = (snap.data() as Map<String, dynamic>)['LC0M215'];
-      LC0M216 = (snap.data() as Map<String, dynamic>)['LC0M216'];
-      LC0M221 = (snap.data() as Map<String, dynamic>)['LC0M221'];
-      LC0M222 = (snap.data() as Map<String, dynamic>)['LC0M222'];
-      LC0M223 = (snap.data() as Map<String, dynamic>)['LC0M223'];
-      LC0M224 = (snap.data() as Map<String, dynamic>)['LC0M224'];
-      LC0M225 = (snap.data() as Map<String, dynamic>)['LC0M225'];
-      LC0M226 = (snap.data() as Map<String, dynamic>)['LC0M226'];
+      LC0M111 = (snap.data() as Map<String, dynamic>)['LC0M111'];
+      LC0M112 = (snap.data() as Map<String, dynamic>)['LC0M112'];
+      LC0M113 = (snap.data() as Map<String, dynamic>)['LC0M113'];
+      LC0M114 = (snap.data() as Map<String, dynamic>)['LC0M114'];
+      LC0M115 = (snap.data() as Map<String, dynamic>)['LC0M115'];
+      LC0M121 = (snap.data() as Map<String, dynamic>)['LC0M121'];
+      LC0M122 = (snap.data() as Map<String, dynamic>)['LC0M122'];
+      LC0M123 = (snap.data() as Map<String, dynamic>)['LC0M123'];
+      LC0M124 = (snap.data() as Map<String, dynamic>)['LC0M124'];
+      LC0M125 = (snap.data() as Map<String, dynamic>)['LC0M125'];
+      LC0M126 = (snap.data() as Map<String, dynamic>)['LC0M126'];
     });
   }
 
@@ -63,7 +61,7 @@ class _AllocationNd2State extends State<AllocationNd2> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'ALLOCATION  COMP SCI',
+          'ALLOCATION ND1 COMP SCI',
           style: Styles.appBarTextStyle,
         ),
         centerTitle: true,
@@ -77,7 +75,7 @@ class _AllocationNd2State extends State<AllocationNd2> {
             const SizedBox(height: 30),
             const Center(
               child: Text(
-                'ND2 COURSE TO LECTURER ALLOCATION',
+                'ND1 COURSE TO LECTURER ALLOCATION',
                 style: Styles.fieldTextStyle,
                 textAlign: TextAlign.center,
               ),
@@ -94,13 +92,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM211:',
+                  'COM111:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M211,
+                    LC0M111,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -110,13 +108,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM212:',
+                  'COM112:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M212,
+                    LC0M112,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -126,13 +124,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM213:',
+                  'COM113:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M213,
+                    LC0M113,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -142,13 +140,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM214:',
+                  'COM114:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M214,
+                    LC0M114,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -158,29 +156,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM215:',
+                  'COM115:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M215,
-                    style: Styles.fieldTextStyle,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 5),
-            Row(
-              children: [
-                const Text(
-                  'COM216:',
-                  style: Styles.fieldTextStyle,
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    LC0M216,
+                    LC0M115,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -197,13 +179,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM221:',
+                  'COM121:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M221,
+                    LC0M121,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -213,13 +195,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM222:',
+                  'COM122:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M222,
+                    LC0M122,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -229,13 +211,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM223:',
+                  'COM123:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M223,
+                    LC0M123,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -245,13 +227,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM224:',
+                  'COM124:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M224,
+                    LC0M124,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -261,13 +243,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM225:',
+                  'COM125:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M225,
+                    LC0M125,
                     style: Styles.fieldTextStyle,
                   ),
                 ),
@@ -277,13 +259,13 @@ class _AllocationNd2State extends State<AllocationNd2> {
             Row(
               children: [
                 const Text(
-                  'COM226:',
+                  'COM126:',
                   style: Styles.fieldTextStyle,
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    LC0M226,
+                    LC0M126,
                     style: Styles.fieldTextStyle,
                   ),
                 ),

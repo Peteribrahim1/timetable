@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:timetable/screens/timetable_nd2_first.dart';
-import 'package:timetable/screens/timetable_nd2_second.dart';
+import 'package:timetable/screens/old/timetable_nd2_first.dart';
+import 'package:timetable/screens/old/timetable_nd2_second.dart';
 
 import '../styles/styles.dart';
-import 'allocation_nd2.dart';
+import 'old/allocation_nd2.dart';
 import 'home.dart';
 
 class Generate_nd2 extends StatefulWidget {

@@ -138,7 +138,7 @@ class _Nd1Timetable_firstState extends State<Nd1Timetable_first> {
             const SizedBox(height: 24),
             const Center(
               child: Text(
-                'ND1 FIRST SEMESTER TIMETABLE',
+                '100L FIRST SEMESTER TIMETABLE',
                 style: Styles.dashboardTextStyle,
               ),
             ),

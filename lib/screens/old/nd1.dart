@@ -3,56 +3,56 @@ import 'package:flutter/material.dart';
 import 'package:snippet_coder_utils/FormHelper.dart';
 import 'package:timetable/screens/generate_nd1_screen.dart';
 import 'package:timetable/screens/home.dart';
-import '../resources/auth_methods.dart';
-import '../styles/styles.dart';
-import '../utils/utils.dart';
-import 'generate_hnd1_screen.dart';
+import '../../resources/auth_methods.dart';
+import '../../styles/styles.dart';
+import '../../utils/utils.dart';
 
-class HND1 extends StatefulWidget {
-  const HND1({Key? key}) : super(key: key);
+class ND1 extends StatefulWidget {
+  const ND1({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  State<HND1> createState() => _HND1State();
+  State<ND1> createState() => _ND1State();
 }
 
-class _HND1State extends State<HND1> {
+class _ND1State extends State<ND1> {
   List<dynamic> lecturers = [];
 
-  String? lecturerId_COM311;
-  String? selectedLecturer_COM311;
+  //first semester
+  String? lecturerId_COM111;
+  String? selectedLecturer_COM111;
 
-  String? lecturerId_COM312;
-  String? selectedLecturer_COM312;
+  String? lecturerId_COM112;
+  String? selectedLecturer_COM112;
 
-  String? lecturerId_COM313;
-  String? selectedLecturer_COM313;
+  String? lecturerId_COM113;
+  String? selectedLecturer_COM113;
 
-  String? lecturerId_COM314;
-  String? selectedLecturer_COM314;
+  String? lecturerId_COM114;
+  String? selectedLecturer_COM114;
 
-  String? lecturerId_COM315;
-  String? selectedLecturer_COM315;
-  //2 sem
-  String? lecturerId_COM321;
-  String? selectedLecturer_COM321;
+  String? lecturerId_COM115;
+  String? selectedLecturer_COM115;
 
-  String? lecturerId_COM322;
-  String? selectedLecturer_COM322;
+  //second semester
+  String? lecturerId_COM121;
+  String? selectedLecturer_COM121;
 
-  String? lecturerId_COM323;
-  String? selectedLecturer_COM323;
+  String? lecturerId_COM122;
+  String? selectedLecturer_COM122;
 
-  String? lecturerId_COM324;
-  String? selectedLecturer_COM324;
+  String? lecturerId_COM123;
+  String? selectedLecturer_COM123;
 
-  String? lecturerId_COM325;
-  String? selectedLecturer_COM325;
+  String? lecturerId_COM124;
+  String? selectedLecturer_COM124;
 
-  String? lecturerId_COM326;
-  String? selectedLecturer_COM326;
+  String? lecturerId_COM125;
+  String? selectedLecturer_COM125;
 
-  String? lecturerId_COM327;
-  String? selectedLecturer_COM327;
+  String? lecturerId_COM126;
+  String? selectedLecturer_COM126;
 
   @override
   void initState() {
@@ -73,23 +73,22 @@ class _HND1State extends State<HND1> {
 
   bool _isLoading = false;
 
-  void saveHND1ToDb() async {
+  void saveND1ToDb() async {
     setState(() {
       _isLoading = true;
     });
-    String res = await AuthMethods().saveHND1(
-      LC0M311: selectedLecturer_COM311?.toString(),
-      LC0M312: selectedLecturer_COM312?.toString(),
-      LC0M313: selectedLecturer_COM313?.toString(),
-      LC0M314: selectedLecturer_COM314?.toString(),
-      LC0M315: selectedLecturer_COM315?.toString(),
-      LC0M321: selectedLecturer_COM321?.toString(),
-      LC0M322: selectedLecturer_COM322?.toString(),
-      LC0M323: selectedLecturer_COM323?.toString(),
-      LC0M324: selectedLecturer_COM324?.toString(),
-      LC0M325: selectedLecturer_COM325?.toString(),
-      LC0M326: selectedLecturer_COM326?.toString(),
-      LC0M327: selectedLecturer_COM327?.toString(),
+    String res = await AuthMethods().saveND1(
+      LC0M111: selectedLecturer_COM111?.toString(),
+      LC0M112: selectedLecturer_COM112?.toString(),
+      LC0M113: selectedLecturer_COM113?.toString(),
+      LC0M114: selectedLecturer_COM114?.toString(),
+      LC0M115: selectedLecturer_COM115?.toString(),
+      LC0M121: selectedLecturer_COM121?.toString(),
+      LC0M122: selectedLecturer_COM122?.toString(),
+      LC0M123: selectedLecturer_COM123?.toString(),
+      LC0M124: selectedLecturer_COM124?.toString(),
+      LC0M125: selectedLecturer_COM125?.toString(),
+      LC0M126: selectedLecturer_COM126?.toString(),
     );
 
     setState(() {
@@ -101,7 +100,7 @@ class _HND1State extends State<HND1> {
     } else {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(
-          builder: (context) => const Generate_hnd1(),
+          builder: (context) => Generate_nd1(),
         ),
       );
       //test run
@@ -119,7 +118,7 @@ class _HND1State extends State<HND1> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'HND1',
+          'ND1',
           style: Styles.appBarTextStyle,
         ),
         centerTitle: true,
@@ -139,28 +138,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 25),
             const Text(
-              'COM311',
+              'COM111',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM311,
+              this.lecturerId_COM111,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM311 = onChangedVal;
+                var fid = this.lecturerId_COM111 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM311 = element['name'];
+                    this.selectedLecturer_COM111 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM311);
+                  print(this.selectedLecturer_COM111);
                 });
               },
               (onValidateVal) {
@@ -174,28 +173,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM312',
+              'COM112',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM312,
+              this.lecturerId_COM112,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM312 = onChangedVal;
+                var fid = this.lecturerId_COM112 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM312 = element['name'];
+                    this.selectedLecturer_COM112 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM312);
+                  print(this.selectedLecturer_COM112);
                 });
               },
               (onValidateVal) {
@@ -209,28 +208,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM313',
+              'COM113',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM313,
+              this.lecturerId_COM113,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM313 = onChangedVal;
+                var fid = this.lecturerId_COM113 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM313 = element['name'];
+                    this.selectedLecturer_COM113 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM313);
+                  print(this.selectedLecturer_COM113);
                 });
               },
               (onValidateVal) {
@@ -244,28 +243,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM314',
+              'COM114',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM314,
+              this.lecturerId_COM114,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM314 = onChangedVal;
+                var fid = this.lecturerId_COM114 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM314 = element['name'];
+                    this.selectedLecturer_COM114 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM314);
+                  print(this.selectedLecturer_COM114);
                 });
               },
               (onValidateVal) {
@@ -279,28 +278,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM315',
+              'COM115',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM315,
+              this.lecturerId_COM115,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM315 = onChangedVal;
+                var fid = this.lecturerId_COM115 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM315 = element['name'];
+                    this.selectedLecturer_COM115 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM315);
+                  print(this.selectedLecturer_COM115);
                 });
               },
               (onValidateVal) {
@@ -312,31 +311,31 @@ class _HND1State extends State<HND1> {
               borderColor: Color.fromRGBO(20, 10, 38, 1),
               borderRadius: 15,
             ),
-            //2 sem
+            //second semester
             const SizedBox(height: 15),
             const Text(
-              'COM321',
+              'COM121',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM321,
+              this.lecturerId_COM121,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM321 = onChangedVal;
+                var fid = this.lecturerId_COM121 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM321 = element['name'];
+                    this.selectedLecturer_COM121 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM311);
+                  print(this.selectedLecturer_COM121);
                 });
               },
               (onValidateVal) {
@@ -350,28 +349,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM322',
+              'COM122',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM322,
+              this.lecturerId_COM122,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM322 = onChangedVal;
+                var fid = this.lecturerId_COM122 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM322 = element['name'];
+                    this.selectedLecturer_COM122 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM322);
+                  print(this.selectedLecturer_COM122);
                 });
               },
               (onValidateVal) {
@@ -385,28 +384,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM323',
+              'COM123',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM323,
+              this.lecturerId_COM123,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM323 = onChangedVal;
+                var fid = this.lecturerId_COM123 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM323 = element['name'];
+                    this.selectedLecturer_COM123 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM323);
+                  print(this.selectedLecturer_COM123);
                 });
               },
               (onValidateVal) {
@@ -420,28 +419,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM324',
+              'COM124',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM324,
+              this.lecturerId_COM124,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM324 = onChangedVal;
+                var fid = this.lecturerId_COM124 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM324 = element['name'];
+                    this.selectedLecturer_COM124 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM324);
+                  print(this.selectedLecturer_COM124);
                 });
               },
               (onValidateVal) {
@@ -455,64 +454,28 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM325',
+              'COM125',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM325,
+              this.lecturerId_COM125,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM325 = onChangedVal;
+                var fid = this.lecturerId_COM125 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM325 = element['name'];
+                    this.selectedLecturer_COM125 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM325);
-                });
-              },
-              (onValidateVal) {
-                if (onValidateVal == null) {
-                  return 'Please select a lecturer';
-                }
-                return null;
-              },
-              borderColor: Color.fromRGBO(20, 10, 38, 1),
-              borderRadius: 15,
-            ),
-            //////
-            const SizedBox(height: 15),
-            const Text(
-              'COM326',
-              style: Styles.fieldTextStyle,
-            ),
-            const SizedBox(height: 5),
-            FormHelper.dropDownWidget(
-              context,
-              'select lecturer',
-              this.lecturerId_COM326,
-              this.lecturers,
-              contentPadding: 16,
-              paddingLeft: 0,
-              paddingRight: 0,
-              (onChangedVal) {
-                var fid = this.lecturerId_COM326 = onChangedVal;
-                print('selected lecturer: $onChangedVal');
-                for (var element in this.lecturers) {
-                  if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM326 = element['name'];
-                  }
-                }
-                setState(() {
-                  print(this.selectedLecturer_COM326);
+                  print(this.selectedLecturer_COM125);
                 });
               },
               (onValidateVal) {
@@ -526,33 +489,33 @@ class _HND1State extends State<HND1> {
             ),
             const SizedBox(height: 15),
             const Text(
-              'COM327',
+              'COM126',
               style: Styles.fieldTextStyle,
             ),
             const SizedBox(height: 5),
             FormHelper.dropDownWidget(
               context,
               'select lecturer',
-              this.lecturerId_COM327,
+              this.lecturerId_COM126,
               this.lecturers,
               contentPadding: 16,
               paddingLeft: 0,
               paddingRight: 0,
               (onChangedVal) {
-                var fid = this.lecturerId_COM327 = onChangedVal;
+                var fid = this.lecturerId_COM126 = onChangedVal;
                 print('selected lecturer: $onChangedVal');
                 for (var element in this.lecturers) {
                   if (element['id'] == int.parse(fid)) {
-                    this.selectedLecturer_COM327 = element['name'];
+                    this.selectedLecturer_COM126 = element['name'];
                   }
                 }
                 setState(() {
-                  print(this.selectedLecturer_COM327);
+                  print(this.selectedLecturer_COM126);
                 });
               },
               (onValidateVal) {
                 if (onValidateVal == null) {
-                  return 'Please select faculty';
+                  return 'Please select a lecturer';
                 }
                 return null;
               },
@@ -566,7 +529,7 @@ class _HND1State extends State<HND1> {
                 height: 52,
                 width: 280,
                 child: ElevatedButton(
-                  onPressed: saveHND1ToDb,
+                  onPressed: saveND1ToDb,
                   style: ButtonStyle(
                     backgroundColor: MaterialStateProperty.all(
                       Colors.red,

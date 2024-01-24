@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:snippet_coder_utils/FormHelper.dart';
 import 'package:timetable/screens/generate_nd1_screen.dart';
 import 'package:timetable/screens/home.dart';
-import '../resources/auth_methods.dart';
-import '../styles/styles.dart';
-import '../utils/utils.dart';
-import 'generate_hnd2_screen.dart';
+import '../../resources/auth_methods.dart';
+import '../../styles/styles.dart';
+import '../../utils/utils.dart';
+import '../generate_hnd2_screen.dart';
 
 class HND2 extends StatefulWidget {
   const HND2({Key? key}) : super(key: key);

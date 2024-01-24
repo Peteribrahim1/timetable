@@ -2,16 +2,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:timetable/screens/modal_hnd1.dart';
 import 'package:timetable/screens/nd1_add_first.dart';
-import 'package:timetable/screens/hnd1.dart';
+import 'package:timetable/screens/old/hnd1.dart';
 import 'package:timetable/screens/login_screen.dart';
 import 'package:timetable/screens/modal_nd1.dart';
-import 'package:timetable/screens/nd2.dart';
+import 'package:timetable/screens/old/nd2.dart';
 
 import '../styles/styles.dart';
-import 'hnd2.dart';
+import 'old/hnd2.dart';
 import 'modal_hnd2.dart';
 import 'modal_nd2.dart';
-import 'nd1.dart';
+import 'old/nd1.dart';
 
 class Home extends StatefulWidget {
   static const routeName = '/role';
@@ -68,7 +68,7 @@ class _HomeState extends State<Home> {
               const SizedBox(height: 30),
               const Center(
                 child: Text(
-                  'HAFED Poly Timetable Generator',
+                  'GSU Timetable Generator',
                   style: Styles.bigTextStyle,
                   textAlign: TextAlign.center,
                 ),
@@ -101,7 +101,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   child: const Text(
-                    'ND1',
+                    '100L',
                     style: Styles.buttonTextStyle,
                   ),
                 ),
@@ -127,7 +127,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   child: const Text(
-                    'ND2',
+                    '200L',
                     style: Styles.buttonTextStyle,
                   ),
                 ),
@@ -152,7 +152,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   child: const Text(
-                    'HND1',
+                    '300L',
                     style: Styles.buttonTextStyle,
                   ),
                 ),
@@ -178,7 +178,7 @@ class _HomeState extends State<Home> {
                     ),
                   ),
                   child: const Text(
-                    'HND2',
+                    '400L',
                     style: Styles.buttonTextStyle,
                   ),
                 ),

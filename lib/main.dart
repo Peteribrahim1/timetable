@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:timetable/screens/allocation_nd1.dart';
+import 'package:timetable/screens/old/allocation_nd1.dart';
 import 'package:timetable/screens/login_screen.dart';
 import 'package:timetable/screens/signup_screen.dart';
 import 'package:timetable/screens/splash_screen.dart';

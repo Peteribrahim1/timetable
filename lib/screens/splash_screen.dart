@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Image.asset('assets/images/hafedlogo.png'),
+          child: Image.asset('assets/images/gsulogo.jpeg'),
         ),
       ),
     );

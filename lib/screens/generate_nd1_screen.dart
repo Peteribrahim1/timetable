@@ -1,9 +1,9 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:timetable/screens/allocation_nd1.dart';
+import 'package:timetable/screens/old/allocation_nd1.dart';
 import 'package:timetable/screens/timetable_nd1_first.dart';
-import 'package:timetable/screens/timetable_nd1_second.dart';
+import 'package:timetable/screens/old/timetable_nd1_second.dart';
 
 import '../styles/styles.dart';
 import 'home.dart';

@@ -135,7 +135,7 @@ class _HNd2Timetable_secondState extends State<HNd2Timetable_second> {
             const SizedBox(height: 24),
             const Center(
               child: Text(
-                'HND2 SECOND SEMESTER TIMETABLE',
+                '400L SECOND SEMESTER TIMETABLE',
                 style: Styles.dashboardTextStyle,
               ),
             ),

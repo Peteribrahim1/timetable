@@ -16,7 +16,7 @@ Future<void> printDoc_nd1s(course1, course2, course3, course4, course5, course6,
             pw.SizedBox(height: 24),
             pw.Center(
               child: pw.Text(
-                'ND1 SECOND SEMESTER TIMETABLE',
+                '100L SECOND SEMESTER TIMETABLE',
               ),
             ),
             pw.SizedBox(height: 10),

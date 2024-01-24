@@ -31,7 +31,7 @@ class _Timetable_nd1_firstState extends State<Timetable_nd1_first> {
             SizedBox(height: 24),
             Center(
               child: Text(
-                'ND1 FIRST SEMESTER TIMETABLE',
+                '100L FIRST SEMESTER TIMETABLE',
                 style: Styles.dashboardTextStyle,
               ),
             ),

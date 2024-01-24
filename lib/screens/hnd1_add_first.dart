@@ -87,7 +87,7 @@ class _HND1Add_firstState extends State<HND1Add_first> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'ADD COURSE/LECTURER HND1 FIRST',
+          'ADD COURSE/LECTURER 300L FIRST',
           style: Styles.appBarTextStyle,
         ),
         centerTitle: true,

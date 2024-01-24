@@ -72,13 +72,13 @@ class _SignupScreenState extends State<SignupScreen> {
                 SizedBox(
                     height: 50,
                     width: 50,
-                    child: Image.asset('assets/images/hafedlogo.png')),
+                    child: Image.asset('assets/images/gsulogo.jpeg')),
 
                 const SizedBox(height: 50),
 
                 // welcome back, you've been missed!
                 const Text(
-                  'Register on the HAFED POLY Timetable App!',
+                  'Register on the GSU Timetable App!',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     color: Color.fromRGBO(20, 10, 38, 1),

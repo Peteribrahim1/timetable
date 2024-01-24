@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../styles/styles.dart';
-import '../widgets/day_widget.dart';
+import '../../styles/styles.dart';
+import '../../widgets/day_widget.dart';
 
-class Timetable_hnd1_second extends StatelessWidget {
-  const Timetable_hnd1_second({super.key});
+class Timetable_nd1_second extends StatelessWidget {
+  const Timetable_nd1_second({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -26,69 +26,69 @@ class Timetable_hnd1_second extends StatelessWidget {
             SizedBox(height: 24),
             Center(
               child: Text(
-                'HND1 SECOND SEMESTER TIMETABLE',
+                'SECOND SEMESTER TIMETABLE',
                 style: Styles.dashboardTextStyle,
               ),
             ),
             SizedBox(height: 24),
             DayWidget(
               day: 'MONDAY',
-              course8to9: 'COM325',
+              course8to9: 'COM124',
               course9to10: '',
-              course10to11: 'COM327',
-              course11to12: 'COM327',
+              course10to11: 'COM121',
+              course11to12: 'COM121',
               course12to1: '',
               course1to2: 'BREAK',
               course2to3: '',
-              course3to4: 'COM322',
-              course4to5: 'COM322',
-              course5to6: '',
-            ),
-            DayWidget(
-              day: 'TUESDAY',
-              course8to9: 'COM323',
-              course9to10: 'COM323',
-              course10to11: '',
-              course11to12: 'COM321',
-              course12to1: '',
-              course1to2: 'BREAK',
-              course2to3: 'COM326',
-              course3to4: 'COM326',
+              course3to4: 'COM125',
               course4to5: '',
               course5to6: '',
             ),
             DayWidget(
-              day: 'WEDNESDAY',
-              course8to9: 'COM321',
-              course9to10: 'COM321',
-              course10to11: 'COM324',
-              course11to12: 'COM324',
-              course12to1: 'COM324',
+              day: 'TUESDAY',
+              course8to9: '',
+              course9to10: '',
+              course10to11: 'COM122',
+              course11to12: 'COM122',
+              course12to1: '',
               course1to2: 'BREAK',
               course2to3: '',
-              course3to4: 'COM322',
-              course4to5: 'COM322',
+              course3to4: '',
+              course4to5: 'COM126',
+              course5to6: 'COM126',
+            ),
+            DayWidget(
+              day: 'WEDNESDAY',
+              course8to9: 'COM125',
+              course9to10: 'COM125',
+              course10to11: '',
+              course11to12: 'COM126',
+              course12to1: 'COM126',
+              course1to2: 'BREAK',
+              course2to3: '',
+              course3to4: 'COM123',
+              course4to5: 'COM123',
               course5to6: '',
             ),
             DayWidget(
               day: 'THURSDAY',
-              course8to9: 'COM324',
-              course9to10: 'COM324',
-              course10to11: '',
-              course11to12: 'COM323',
-              course12to1: 'COM323',
+              course8to9: 'COM124',
+              course9to10: 'COM124',
+              course10to11: 'COM121',
+              course11to12: 'COM121',
+              course12to1: '',
               course1to2: 'BREAK',
               course2to3: '',
               course3to4: '',
-              course4to5: 'COM325',
+              course4to5: 'COM122',
               course5to6: '',
             ),
             DayWidget(
               day: 'FRIDAY',
-              course8to9: 'COM326',
-              course9to10: 'COM326',
-              course10to11: 'COM327',
-              course11to12: 'COM327',
+              course8to9: 'COM123',
+              course9to10: 'COM123',
+              course10to11: '',
+              course11to12: '',
               course12to1: '',
               course1to2: 'BREAK',
               course2to3: '',

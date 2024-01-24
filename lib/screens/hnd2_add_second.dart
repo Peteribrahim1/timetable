@@ -90,7 +90,7 @@ class _HND2Add_secondState extends State<HND2Add_second> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'ADD COURSE/LECTURER HND2 SECOND',
+          'ADD COURSE/LECTURER 400L SECOND',
           style: Styles.appBarTextStyle,
         ),
         centerTitle: true,

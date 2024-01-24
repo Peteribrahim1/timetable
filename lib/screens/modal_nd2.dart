@@ -46,7 +46,7 @@ class ModalND2 extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  'ND2 FIRST SEMESTER',
+                  '200L FIRST SEMESTER',
                   style: Styles.buttonTextStyle,
                 ),
               ),
@@ -72,7 +72,7 @@ class ModalND2 extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                  'ND2 SECOND SEMESTER',
+                  '200L SECOND SEMESTER',
                   style: Styles.buttonTextStyle,
                 ),
               ),

@@ -42,7 +42,7 @@ class _ViewHNd2SecondState extends State<ViewHNd2Second> {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          'VIEW COURSE/LECTURER HND2 SECOND',
+          'VIEW COURSE/LECTURER 400L SECOND',
           style: Styles.appBarTextStyle,
         ),
         centerTitle: true,

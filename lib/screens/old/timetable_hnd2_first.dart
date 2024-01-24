@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../styles/styles.dart';
-import '../widgets/day_widget.dart';
+import '../../styles/styles.dart';
+import '../../widgets/day_widget.dart';
 
 class Timetable_hnd2_first extends StatelessWidget {
   const Timetable_hnd2_first({super.key});

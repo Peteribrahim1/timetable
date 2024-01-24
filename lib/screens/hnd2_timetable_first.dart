@@ -134,7 +134,7 @@ class _HNd2Timetable_firstState extends State<HNd2Timetable_first> {
             const SizedBox(height: 24),
             const Center(
               child: Text(
-                'HND2 FIRST SEMESTER TIMETABLE',
+                '400L FIRST SEMESTER TIMETABLE',
                 style: Styles.dashboardTextStyle,
               ),
             ),
